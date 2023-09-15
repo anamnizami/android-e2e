@@ -19,6 +19,7 @@ class AndroidTest {
         options.setPlatformName("Android");
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setDeviceName("Nexus 6");
+        options.setCapability("newCommandTimeout", 30000);
         options.setApp(System.getProperty("user.dir")+"/apps/Android-MyDemoAppRN.1.3.0.build-244.apk");
         AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723"),options);
         Thread.sleep(4000);
