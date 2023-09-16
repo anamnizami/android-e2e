@@ -83,7 +83,6 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 11
-        cache: 'gradle'
     - name: Install the Emulator
       run: |
         chmod +x ./scripts/RunAppiumServer.sh
