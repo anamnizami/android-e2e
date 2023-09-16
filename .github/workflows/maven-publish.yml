@@ -89,9 +89,7 @@ jobs:
         ./scripts/RunAppiumServer.sh
       shell: bash
 
-    - name: Install scrcpy on macOS
-      run: |
-        brew install scrcpy
+
 
     - name: Run Appium Tests
       uses: reactivecircus/android-emulator-runner@v2.27.0
@@ -101,11 +99,11 @@ jobs:
         arch: x86_64
         profile: Nexus 6
         script: |
-          scrcpy --record output.mp4 &
-          RECORDING_PID=$!
+          
+   
 
           mvn --batch-mode --update-snapshots package
-          kill $RECORDING_PID
+          
 
     - name: Upload Appium logs
       uses: actions/upload-artifact@v2
@@ -113,8 +111,4 @@ jobs:
           name: appium-logs
           path: appium.log
 
-    - name: Publish Video
-      uses: actions/upload-artifact@v2
-      with:
-          name: output.mp4
-          path: output.mp4
+
