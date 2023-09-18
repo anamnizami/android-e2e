@@ -16,7 +16,7 @@ import java.net.URL;
 class AndroidTest {
     private static final Logger logger = Logger.getLogger(AndroidTest.class.getName());
     @Test
-     void AndroidLaunchTest () throws InterruptedException, MalformedURLException {
+    void AndroidLaunchTest () throws InterruptedException, MalformedURLException {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName("Android");
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
@@ -34,9 +34,10 @@ class AndroidTest {
 
             // Log the text to the terminal
 //            System.out.println("Element Text: " + driver.findElement(By.xpath("com.qualitrain.fitness:id/start_sign_in_button")).getText());
-            logger.warning(driver.findElement(By.id("com.qualitrain.fitness:id/complete_account")).getText());
+            Thread.sleep(10000);
 
-            Assert.assertEquals(driver.findElement(By.id("com.qualitrain.fitness:id/complete_account")).getText(),"Activate My Account");
+            logger.warning(driver.findElement(By.id("com.qualitrain.fitness:id/start_sign_in_button")).getText());
+            Assert.assertEquals(driver.findElement(By.id("com.qualitrain.fitness:id/start_sign_in_button")).getText(),"Log In");
         } finally {
             driver.quit();
         }
@@ -46,7 +47,7 @@ class AndroidTest {
     @Test
     void AT () {
         logger.warning("hello hello hello hello");
-            assert 1 == 1;
+        assert 1 == 1;
     }
 }
 
