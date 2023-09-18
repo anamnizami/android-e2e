@@ -3,6 +3,7 @@ package com.test;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -21,6 +22,7 @@ class AndroidTest {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
 //        options.setDeviceName("Neiuoi");
         options.setCapability("newCommandTimeout", 30000);
+        options.setCapability(AndroidMobileCapabilityType.ANDROID_INSTALL_TIMEOUT, 200000);
         options.setApp(System.getProperty("user.dir")+"/apps/galaxy-QualitrainRelease-3.13.10644.283.apk");
         AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723"),options);
         Thread.sleep(10000);
