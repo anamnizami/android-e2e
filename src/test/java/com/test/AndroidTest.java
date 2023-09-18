@@ -45,6 +45,7 @@ class AndroidTest {
     void AT () {
         logger.warning("hello hello hello hello");
             assert 1 == 1;
+
         
     }
 }
