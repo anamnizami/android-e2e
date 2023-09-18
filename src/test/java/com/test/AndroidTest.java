@@ -21,11 +21,11 @@ class AndroidTest {
         options.setPlatformName("Android");
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
 //        options.setDeviceName("Neiuoi");
-        options.setCapability("newCommandTimeout", 30000);
+        // options.setCapability("newCommandTimeout", 30000);
         options.setCapability(AndroidMobileCapabilityType.ANDROID_INSTALL_TIMEOUT, 400000);
         options.setApp(System.getProperty("user.dir")+"/apps/galaxy-QualitrainRelease-3.13.10644.283.apk");
         AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723"),options);
-        Thread.sleep(10000);
+        // Thread.sleep(10000);
 
         try {
 
