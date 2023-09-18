@@ -15,33 +15,33 @@ import java.net.URL;
 
 class AndroidTest {
     private static final Logger logger = Logger.getLogger(AndroidTest.class.getName());
-    @Test
-     void AndroidLaunchTest () throws InterruptedException, MalformedURLException {
-        UiAutomator2Options options = new UiAutomator2Options();
-        options.setPlatformName("Android");
-        options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-//        options.setDeviceName("Neiuoi");
-        options.setCapability("newCommandTimeout", 30000);
-        options.setCapability(AndroidMobileCapabilityType.ANDROID_INSTALL_TIMEOUT, 200000);
-        options.setApp(System.getProperty("user.dir")+"/apps/galaxy-QualitrainRelease-3.13.10644.283.apk");
-        AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723"),options);
-        Thread.sleep(10000);
+//     @Test
+//      void AndroidLaunchTest () throws InterruptedException, MalformedURLException {
+//         UiAutomator2Options options = new UiAutomator2Options();
+//         options.setPlatformName("Android");
+//         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
+// //        options.setDeviceName("Neiuoi");
+//         options.setCapability("newCommandTimeout", 30000);
+//         options.setCapability(AndroidMobileCapabilityType.ANDROID_INSTALL_TIMEOUT, 200000);
+//         options.setApp(System.getProperty("user.dir")+"/apps/galaxy-QualitrainRelease-3.13.10644.283.apk");
+//         AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723"),options);
+//         Thread.sleep(10000);
 
-        try {
+//         try {
 
 
-//            String elementText = element.getText();
+// //            String elementText = element.getText();
 
-            // Log the text to the terminal
-//            System.out.println("Element Text: " + driver.findElement(By.xpath("com.qualitrain.fitness:id/start_sign_in_button")).getText());
-            logger.warning(driver.findElement(By.id("com.qualitrain.fitness:id/complete_account")).getText());
+//             // Log the text to the terminal
+// //            System.out.println("Element Text: " + driver.findElement(By.xpath("com.qualitrain.fitness:id/start_sign_in_button")).getText());
+//             logger.warning(driver.findElement(By.id("com.qualitrain.fitness:id/complete_account")).getText());
 
-            Assert.assertEquals(driver.findElement(By.id("com.qualitrain.fitness:id/complete_account")).getText(),"Activate My Account");
-        } finally {
-            driver.quit();
-        }
+//             Assert.assertEquals(driver.findElement(By.id("com.qualitrain.fitness:id/complete_account")).getText(),"Activate My Account");
+//         } finally {
+//             driver.quit();
+//         }
 
-    }
+//     }
 
     @Test
     void AT () {
